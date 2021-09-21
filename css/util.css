@@ -1,0 +1,14 @@
+* {
+  --text-primary: #2cfc03;
+}
+.text-primary {
+  color: var(--text-primary);
+}
+
+.line {
+  background: var(--text-primary);
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
