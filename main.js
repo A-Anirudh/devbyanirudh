@@ -19,16 +19,3 @@ window.onscroll = function () {
 };
 
 
-// const image = document.getElementById('photo');
-// const logo = document.getElementById('logo');
-
-// console.log(image)
-
-// window.addEventListener('scroll', (e) => {
-//     // image.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
-//     logo.style.transform = "rotateY(" + window.pageYOffset / 2 + "deg)";
-//     // console.log('scrolling')
-
-
-
-// })

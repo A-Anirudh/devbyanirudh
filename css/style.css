@@ -120,7 +120,6 @@ nav ul li a:hover {
   font-size: 70px;
 }
 
-
 /*  About section */
 
 .photo {
@@ -195,53 +194,39 @@ nav ul li a:hover {
 }
 
 /* Projects */
-.thumbnail{
-  height: 400px;
-  width: 400px;
-  object-fit: contain;
-  
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 50px 0;
 }
 
-.projects{
-  height: 100vh;
-
-}
-
-.projects h1{
+.projects-heading {
   text-align: center;
   font-size: 40px;
-  padding-top: 70px;
+  margin: 10px;
 }
 
-.all-projects{
-  display: flex;
-  flex-grow: 1;
-  width:90vw;
-  margin:100px;
-  padding: 10px;
-
-}
-
-.project{
+.project a {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
-  background: linear-gradient(var(--text-secondary) , rgb(76, 76, 190));
-  width: 100vw;
-}
-
-.project a{
-  font-size: 30px;
-  color: white;
+  align-items: center;
   text-decoration: none;
-  padding-bottom: 20px;
-}
-
-.project a:hover{
   color: var(--text-primary);
 }
 
+.project a:hover {
+  color: var(--text-secondary);
+}
+.thumbnail img {
+  height: 500px !important;
+  width: 500px !important;
+  object-fit: contain;
+}
 /* Keyframes */
 
 @keyframes in {
@@ -296,16 +281,12 @@ nav ul li a:hover {
     0 0 151px var(--text-primary);
 }
 
-
-
-
-
-
 /* mobile responsive */
 
 @media (max-width: 600px) {
   .navbar {
     width: 100%;
+    height: 50px;
   }
 
   nav ul {
@@ -317,33 +298,31 @@ nav ul li a:hover {
   }
 
   .navbar h2 a img {
-    height: 90px;
+    height: 80px !important;
     padding: 20px;
     user-select: none;
   }
 
-  .hero .content h2{
+  .hero .content h2 {
     animation: none;
-      font-size: 40px;
-
+    font-size: 40px;
   }
-  .hero .content h4{
+  .hero .content h4 {
     animation: none;
     font-size: 30px;
-
   }
-  .hero .content h4 .text-primary{
+  .hero .content h4 .text-primary {
     font-size: 30px;
   }
-  .hero .content::after{
-      animation: show 01s ease-in  forwards;
-      width: 300px;
-
+  .hero .content::after {
+    animation: none;
+    width: 100px;
   }
+
   /* About */
 
-  .tag-line{
-    display: none ;
+  .tag-line {
+    display: none;
   }
 
   .about-section p {
@@ -357,79 +336,75 @@ nav ul li a:hover {
     top: 40%;
     left: 0;
     z-index: -3;
-    font-size: 10px ;
-    font-weight: 700;
+    font-size: 20px !important;
+    font-weight: 100 !important;
   }
 
   .about-section img {
-  position: absolute;
-  top: 32%;
-  left: 35%;
-  border: 1px solid white;
-}
-.photo {
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* Projects */
-
-  .thumbnail{
-    height:80vw !important;
-    width: 50vw;
+    position: absolute;
+    top: 32%;
+    left: 35%;
+    border: 1px solid white;
+  }
+  .photo {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
+  /* Projects */
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 
+  .projects-heading {
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+  }
 
-  .all-projects{
-  display: flex;
-  flex-direction: column;
-  margin-top: 400px !important;
-  padding: 0;
+  .project a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 10px 0;
+  }
 
-
-
-}
-
-  .project{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(var(--text-secondary) , rgb(76, 76, 190));
-  margin-top: 5px;
-}
-
-.project a{
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-}
-
-
-
+  .project a:hover {
+    color: var(--text-secondary);
+  }
+  .thumbnail img {
+    height: 300px !important;
+    width: 300px !important;
+    object-fit: contain;
+  }
 }
 
 /* For iPad pro this is something useless */
-@media (max-height:1400px) and (max-width: 1024px) {
-  .logo{
+@media (max-height: 1400px) and (max-width: 1024px) {
+  .logo {
     height: 100px !important;
     padding: 5px;
   }
-  .tag-line{
+  .tag-line {
     display: none;
-  
-
   }
 
-    .about-section img {
-  position: absolute;
-  top: 33%;
-  left: 40%;
-  border: 1px solid white;
-}
+  .about-section img {
+    position: absolute;
+    top: 33%;
+    left: 40%;
+    border: 1px solid white;
+  }
 
   .about-section p {
     background: #f4f4f4;
@@ -443,56 +418,51 @@ nav ul li a:hover {
     left: 0;
     padding: 100px;
     z-index: -3;
-    font-size: 35px ;
+    font-size: 35px;
     font-weight: 700;
   }
 
-  .about-section h1{
+  .about-section h1 {
     font-size: 50px;
   }
-
   /* Projects */
-
-  .thumbnail{
-    height: 100vw;
-    width: 100vw;
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 
-  .projects h1{
-    font-size:50px;
-
+  .projects-heading {
+    text-align: center;
+    font-size: 50px;
+    padding: 0;
   }
 
-  .all-projects{
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
+  .project a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 10px 0;
+    font-size: 40px;
+  }
 
+  .project a:hover {
+    color: var(--text-secondary);
+  }
+  .thumbnail img {
+    height: 700px !important;
+    width: 700px !important;
+    object-fit: contain;
+  }
 }
 
-  .project{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(var(--text-secondary) , rgb(76, 76, 190));
-  margin-top: 10px;
-}
-
-.project a{
-  font-size: 40px;
-  color: white;
-  text-decoration: none;
-}
-
-
-
-  
-} 
-
-
-@media (max-width: 300px) {
+@media (max-width: 330px) {
   .navbar {
     width: 100%;
   }
@@ -510,14 +480,54 @@ nav ul li a:hover {
     padding: 20px;
     user-select: none;
   }
-    .hero .content h2{
+  .hero .content h2 {
     animation: none;
   }
-  .hero .content h4{
+  .hero .content h4 {
     animation: none;
   }
-  .hero .content::after{
-      animation: show 01s ease-in  forwards;
+  .hero .content::after {
+    animation: show 01s ease-in forwards;
+  }
 
+  .about-section p {
+    font-size: 20px;
+    /* width: 100%; */
+    padding: 50px !important;
+  }
+  /* Projects */
+  .projects {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .projects-heading {
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+  }
+
+  .project a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 10px 0;
+    font-size: 20px !important;
+  }
+
+  .project a:hover {
+    color: var(--text-secondary);
+  }
+  .thumbnail img {
+    height: 300px !important;
+    width: 300px !important;
+    object-fit: contain;
   }
 }
